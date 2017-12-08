@@ -167,7 +167,7 @@ def main():
             D_result_fake = D(x_fake)
             D_fake_loss = criterion(D_result_fake, y_fake)
 
-            D_loss = D_fake_loss + D_fake_loss
+            D_loss = D_real_loss + D_fake_loss
 
             D.zero_grad()
             D_loss.backward()
